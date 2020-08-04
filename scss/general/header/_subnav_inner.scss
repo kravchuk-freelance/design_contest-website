@@ -1,0 +1,33 @@
+.subnav_inner {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    padding-left: 1px;
+
+    &_list {
+        background-color: $bckgrnd_gray_1;
+        border-top: 2px solid $brand_color;
+    }
+    
+    &_item {
+        width: 235px;
+        border-bottom: 1px solid $border_gray_4;
+
+        &:hover .subnav_inner_link {
+            color: $brand_color;
+        }
+
+    }
+    
+    &_link {
+        @include font(14px, 24px, 'Lato-Regular');
+
+        position: relative;
+        display: block;
+        padding: 12px 35px 12px 20px;
+        text-transform: uppercase;
+        color: $text_silver_2;
+    }
+    
+}

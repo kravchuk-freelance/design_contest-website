@@ -1,0 +1,63 @@
+.testimonials {
+    background-color: $bckgrnd_white;
+
+    &_content {
+        @extend %center_block;
+
+        padding-bottom: 80px;
+    }
+    
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &_item {
+        flex-basis: 48.7179%;
+        margin-bottom: 2.564%;
+    }
+
+    &_description {
+        position: relative;
+        background-color: $bckgrnd_silver_1;
+        padding: 30px;
+        margin-bottom: 30px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border: 15px solid transparent;
+            border-top: 15px solid $bckgrnd_silver_1;
+        }
+
+    }
+    
+    &_text {
+        @include font(16px, 24px, 'Lato-Regular');
+    
+        color: $text_gray_3;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    &_raiting {
+        @include font(14px, 24px, 'Lato-Regular');
+    
+        color: $text_gray_1;
+        text-align: center;
+    }
+    
+    &_name {
+        @include font(14px, 24px, 'Lato-Bold');
+    
+        color: $text_gray_3;
+        text-align: center;
+    }
+
+}

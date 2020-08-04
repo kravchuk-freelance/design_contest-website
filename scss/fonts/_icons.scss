@@ -1,0 +1,176 @@
+@font-face {
+	font-family: "myfont";
+	src: url('../fonts/iconsfont/myfont.eot');
+	src: url('../fonts/iconsfont/myfont.eot?#iefix') format('eot'),
+		url('../fonts/iconsfont/myfont.woff2') format('woff2'),
+		url('../fonts/iconsfont/myfont.woff') format('woff'),
+		url('../fonts/iconsfont/myfont.ttf') format('truetype'),
+		url('../fonts/iconsfont/myfont.svg#myfont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "myfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == anchor {
+		$char: "\E001";
+	}
+	@if $filename == arrow-left {
+		$char: "\E002";
+	}
+	@if $filename == arrow-right {
+		$char: "\E003";
+	}
+	@if $filename == arrow_up {
+		$char: "\E004";
+	}
+	@if $filename == bag {
+		$char: "\E005";
+	}
+	@if $filename == camera {
+		$char: "\E006";
+	}
+	@if $filename == checked {
+		$char: "\E007";
+	}
+	@if $filename == cup {
+		$char: "\E008";
+	}
+	@if $filename == deer {
+		$char: "\E009";
+	}
+	@if $filename == facebook {
+		$char: "\E00A";
+	}
+	@if $filename == google {
+		$char: "\E00B";
+	}
+	@if $filename == linkedin {
+		$char: "\E00C";
+	}
+	@if $filename == mail {
+		$char: "\E00D";
+	}
+	@if $filename == monitor {
+		$char: "\E00E";
+	}
+	@if $filename == notebook {
+		$char: "\E00F";
+	}
+	@if $filename == notification {
+		$char: "\E010";
+	}
+	@if $filename == phone {
+		$char: "\E011";
+	}
+	@if $filename == pinterest {
+		$char: "\E012";
+	}
+	@if $filename == screen {
+		$char: "\E013";
+	}
+	@if $filename == shirt {
+		$char: "\E014";
+	}
+	@if $filename == target {
+		$char: "\E015";
+	}
+	@if $filename == twitter {
+		$char: "\E016";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-anchor {
+	@include icon(anchor);
+}
+.icon-arrow-left {
+	@include icon(arrow-left);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+.icon-arrow_up {
+	@include icon(arrow_up);
+}
+.icon-bag {
+	@include icon(bag);
+}
+.icon-camera {
+	@include icon(camera);
+}
+.icon-checked {
+	@include icon(checked);
+}
+.icon-cup {
+	@include icon(cup);
+}
+.icon-deer {
+	@include icon(deer);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-google {
+	@include icon(google);
+}
+.icon-linkedin {
+	@include icon(linkedin);
+}
+.icon-mail {
+	@include icon(mail);
+}
+.icon-monitor {
+	@include icon(monitor);
+}
+.icon-notebook {
+	@include icon(notebook);
+}
+.icon-notification {
+	@include icon(notification);
+}
+.icon-phone {
+	@include icon(phone);
+}
+.icon-pinterest {
+	@include icon(pinterest);
+}
+.icon-screen {
+	@include icon(screen);
+}
+.icon-shirt {
+	@include icon(shirt);
+}
+.icon-target {
+	@include icon(target);
+}
+.icon-twitter {
+	@include icon(twitter);
+}

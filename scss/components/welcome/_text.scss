@@ -1,0 +1,97 @@
+.text {
+    background-color: $bckgrnd_silver_1;
+
+    &_content {
+        @extend %center_block;
+
+        padding: 80px 0 50px;
+    }
+
+    &_title {
+        @include font(20px, 24px, 'Exo-Bold');
+
+        text-align: left;
+        color: $text_gray_2;
+        text-transform: uppercase;
+    }
+    
+    &_subtitle {
+        @include font(14px, 24px, 'Lato-Regular');
+        
+        text-align: left;
+        color: $text_gray_3;
+        margin-bottom: 40px;
+    }
+    
+    .preview {
+        overflow: hidden;
+        
+        &_list {
+            width: 102.5641025%;
+            font-size: 0;
+        }
+        
+        &_item {
+            position: relative;
+            display: inline-block;
+            width: 30.8333%;
+            margin-right: 2.5%;
+            margin-bottom: 30px;
+        }
+        
+        &_input {
+            display: none;
+
+            &:checked + .preview_label {
+                @extend .icon-checked;
+                
+                background-color: $text_gray_2;
+                opacity: 0.8;
+
+                &::before {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                    color: $text_white;
+                    font-size: 20px;
+                }
+                
+            }
+            
+        }
+        
+        &_label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $text_gray_2;
+                opacity: 0.8;
+            }
+
+        }
+        
+        &_img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &_wrap {
+                position: relative;
+                overflow: hidden;
+                width: 370px;
+                height: 225px;
+            }
+
+        }
+
+    }
+
+}

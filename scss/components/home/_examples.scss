@@ -1,0 +1,103 @@
+.examples {
+    background-color: $bckgrnd_silver_1;
+
+    &_content {
+        @extend %center_block;
+
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    &_title {
+        @include font(28px, 1, 'Exo-Bold');
+
+        color: $text_gray_2;
+        margin-bottom: 60px;
+        text-transform: uppercase;
+    }
+    
+    &_list {
+        @extend %clearfix;
+
+        margin-bottom: 60px;
+    }
+
+    &_item {
+        position: relative;
+        float: left;
+        width: 25%;
+        height: 230px;
+        cursor: pointer;
+
+        &_link {
+            @extend .icon-anchor;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $brand_color;
+                font-size: 20px;
+            }
+
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &:hover .examples_item_link {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: $bckgrnd_black_rgba;
+        }
+
+    }
+
+    &_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &_wrap {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+    }
+
+    &_span {
+        @include font(14px, 24px, 'Lato-Bold');
+        
+        width: 50%;
+        color: $text_white;
+        text-align: center;
+        background-color: $brand_color;
+        display: block;
+        padding: 8px 0;
+        
+        &:first-child {
+            border-right: 1px solid $text_white;
+        }
+        
+    }
+    
+    &_link {
+        @include font(14px, 24px, 'Lato-Bold');
+
+        color: $text_white;
+        display: inline-block;
+        width: 230px;
+        padding: 13px 0;
+        background-color: $brand_color;
+        text-transform: uppercase;
+    }
+
+}

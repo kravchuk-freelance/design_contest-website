@@ -1,0 +1,82 @@
+.graphic {
+    background-color: $bckgrnd_white;
+
+    &_content {
+        @extend %center_block;
+        @extend %clearfix;
+
+        padding-bottom: 80px;
+    }
+
+    &_left {
+        float: left;
+        width: 48.7179%;
+    }
+    
+    &_right {
+        float: right;
+        width: 48.7179%;
+    }
+    
+    &_title {
+        @include font(20px, 24px, 'Exo-Bold');
+    
+        color: $text_gray_2;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    
+    &_description {
+        @include font(16px, 24px, 'Lato-Regular');
+        
+        color: $text_gray_3;
+        margin-bottom: 50px;
+    }
+    
+    &_list {
+        
+    }
+    
+    &_item {
+        position: relative;
+        padding: 0 70px;
+        margin-bottom: 30px;
+
+        &_1 {
+            @extend .icon-cup;
+        }
+
+        &_2 {
+            @extend .icon-screen;
+        }
+
+        &_3 {
+            @extend .icon-notebook;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 50px;
+            color: $text_gray_1;
+        }
+
+        
+        &_title {
+            @include font(18px, 24px, 'Exo-Bold');
+            
+            color: $text_gray_2;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        &_description {
+            @include font(14px, 24px, 'Lato-Regular');
+            
+            color: $text_gray_3;
+        }
+
+    }
+
+}

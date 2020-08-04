@@ -1,0 +1,73 @@
+.statistic {
+    background: url("../img/statistic/bckgrng_statistic.jpg") center center no-repeat;
+    background-size: cover;
+
+    &_content {
+        @extend %center_block;
+    }
+
+    .stat {
+
+        &_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        &_item {
+            @include font(16px, 24px, 'Lato-Bold');
+            
+            position: relative;
+            flex-basis: 23.0769%;
+            color: $text_white;
+            text-align: center;
+            margin: 60px 0;
+            text-transform: uppercase;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 70px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                border-bottom: 2px solid $brand_color;
+            }
+            
+            &_1::before {
+                @include font(40px, 1, 'Lato-Bold');
+
+                content: "313";
+                display: block;
+                margin-bottom: 50px;
+            }
+
+            &_2::before {
+                @include font(40px, 1, 'Lato-Bold');
+
+                content: "5171";
+                display: block;
+                margin-bottom: 50px;
+            }
+
+            &_3::before {
+                @include font(40px, 1, 'Lato-Bold');
+
+                content: "33612";
+                display: block;
+                margin-bottom: 50px;
+            }
+
+            &_4::before {
+                @include font(40px, 1, 'Lato-Bold');
+
+                content: "$8515";
+                display: block;
+                margin-bottom: 50px;
+            }
+
+        }
+
+    }
+
+}

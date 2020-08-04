@@ -1,0 +1,13 @@
+.greeting {
+    background: url("../img/greeting.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 65px 100px;
+
+    &_title {
+        @include font(20px, 24px, 'Exo-Bold');
+
+        text-align: center;
+        color: $text_gray_2;
+    }
+
+}

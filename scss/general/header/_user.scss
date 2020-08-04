@@ -1,0 +1,102 @@
+.header_bottom_content {
+
+    .user {
+
+        &_message {
+            @extend .icon-mail;
+
+            position: relative;
+            display: inline-block;
+            margin-right: 18px;
+            padding-right: 12px;
+            vertical-align: top;
+
+            &::before {
+                color: $text_gray_1;
+                line-height: 42px;
+                font-size: 18px;
+            }
+
+            &::after {
+                content: "1";
+                position: absolute;
+                top: 4px;
+                right: 0;
+                display: inline-block;
+                line-height: 18px;
+                min-width: 18px;
+                padding: 0 5px;
+                text-align: center;
+                color: $text_white;
+                background-color: $bckgrnd_gray_1;
+                border-radius: 20px;
+            }
+
+            &:hover::after {
+                background-color: $brand_color;
+            }
+            
+        }
+        
+        &_notification {
+            @extend .icon-notification;
+            
+            position: relative;
+            display: inline-block;
+            margin-right: 18px;
+            padding-right: 12px;
+            vertical-align: top;
+
+            &::before {
+                color: $text_gray_1;
+                line-height: 42px;
+                font-size: 18px;
+            }
+
+            &::after {
+                content: "3";
+                position: absolute;
+                top: 4px;
+                right: 0;
+                display: inline-block;
+                line-height: 18px;
+                min-width: 18px;
+                padding: 0 5px;
+                text-align: center;
+                color: $text_white;
+                background-color: $bckgrnd_gray_1;
+                border-radius: 20px;
+            }
+
+            &:hover::after {
+                background-color: $brand_color;
+            }
+
+        }
+        
+        &_photo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            &_wrap {
+                position: relative;
+                display: inline-block;
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                overflow: hidden;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+
+            }
+
+        }
+        
+    }
+    
+}

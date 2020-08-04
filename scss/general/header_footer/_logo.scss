@@ -1,0 +1,19 @@
+.logo {
+
+    &_img_wrap {
+        display: inline-block;  
+    }
+
+    &_name {
+        @include font(24px, 38px, 'Exo-Bold');
+
+        display: inline-block;
+        vertical-align: bottom;
+        color: $text_gray_2;
+    }
+
+    &_span {
+        color: $brand_color;
+    }
+    
+}

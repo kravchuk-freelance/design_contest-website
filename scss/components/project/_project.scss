@@ -1,0 +1,99 @@
+.project {
+    background-color: $bckgrnd_white;
+
+    &_content {
+        @extend %center_block;
+        @extend %clearfix;
+
+        padding-bottom: 80px;
+    }
+
+    &_left {
+        float: left;
+        width: 48.7179%;
+    }
+    
+    &_right {
+        float: right;
+        width: 48.7179%;
+    }
+
+    &_title {
+        @include font(20px, 24px, 'Exo-Bold');
+
+        color: $text_gray_2;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+    
+    .inspiration {
+
+        &_item {
+            position: relative;
+            width: 100%;
+            height: 335px;
+            overflow: hidden;
+        }
+    
+        &_img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .slick-arrow {
+            width: 35px;
+            height: 35px;
+            background-color: $brand_color;
+            
+            &::before {
+                font-size: 12px;
+                opacity: 1;
+            }
+            
+        }
+        
+        .slick-prev {
+            @extend .icon-arrow-left;
+            
+            left: 0;
+            z-index: 1;
+        }
+        
+        .slick-next {
+            @extend .icon-arrow-right;
+
+            right: 0;
+        }
+        
+        .slick-disabled {
+            background-color: $text_gray_2;
+        }
+
+    }
+    
+    &_description {
+
+        &_title {
+            @include font(18px, 24px, 'Exo-Bold');
+
+            color: $text_gray_2;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        &_text {
+            @include font(14px, 24px, 'Lato-Regular');
+            
+            color: $text_gray_3;
+            margin-bottom: 15px;
+        }
+
+        &_span {
+            display: block;
+        }
+
+    }
+
+}

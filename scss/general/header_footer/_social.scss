@@ -1,0 +1,55 @@
+.social {
+
+    &_list{
+        @extend %clearfix;
+    }
+
+    &_item{
+        float: left;
+        margin-left: 10px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+    }
+
+    &_link {
+        display: inline-block;
+        
+        &_facebook {
+            @extend .icon-facebook;
+        }
+        
+        &_twitter {
+            @extend .icon-twitter;
+        }
+        
+        &_pinterest {
+            @extend .icon-pinterest;
+        }
+        
+        &_linkedin {
+            @extend .icon-linkedin;
+        }
+        
+        &_google {
+            @extend .icon-google;
+        }
+
+        &::before {
+            font-size: 12px;
+            line-height: 30px;
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+            color: $text_gray_1;   
+        }
+
+        &:hover::before {
+            color: $brand_color;
+        }
+
+    }
+
+}

@@ -1,0 +1,61 @@
+.header_bottom_content {
+
+    .nav {
+                
+        &_list {
+            font-size: 0;
+            text-align: center;
+        }
+
+        &_item {
+            position: relative;
+            display: inline-block;
+            margin-left: 45px;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &_subnav {
+                padding: 0 15px 0 20px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: calc(50% + 2px);
+                    right: 0;
+                    transform: translateY(-50%);
+                    width: 0;
+                    height: 0;
+                    border: 4px solid transparent;
+                    border-top: 4px solid $text_gray_2;
+                }
+
+                &:hover::after {
+                    border-top-color: $brand_color;
+                }
+
+            }
+
+            &:hover .nav_link {
+                color: $brand_color;
+            }
+
+            &:hover .subnav {
+                display: block;
+            }
+
+        }
+
+        &_link {
+            @include font(14px, 24px, 'Lato-Regular');
+
+            position: relative;
+            display: inline-block;
+            color: $text_gray_2;
+            text-transform: uppercase;
+        }
+
+    }
+    
+}

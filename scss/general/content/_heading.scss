@@ -1,0 +1,33 @@
+.heading {
+    padding: 100px 100px 60px;
+
+    &_title {
+        @include font(28px, 1, 'Exo-Bold');
+
+        position: relative;
+        color: $text_gray_2;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 23px;
+        margin-bottom: 30px;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            border-bottom: 3px solid $brand_color;
+        }
+        
+    }
+    
+    &_subtitle {
+        @include font(16px, 24px, 'Lato-Regular');
+        
+        color: $text_gray_3;
+        text-align: center;
+    }
+
+}

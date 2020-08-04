@@ -1,0 +1,59 @@
+.banner {
+    background: url("../img/banner/banner_bckgrnd.jpg") center center no-repeat;
+    background-size: cover;
+
+    &_content {
+        @extend %center_block;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 700px;
+        padding: 250px 100px 150px;
+    }
+
+
+    &_title {
+        @include font(40px, 1, 'Exo-Bold');
+
+        color: $text_gray_2;
+
+        &_wrap {
+            text-align: center;
+            margin-bottom: 20px;
+
+            .logo_img_wrap {
+                position: relative;
+                padding-bottom: 25px;
+                margin-bottom: 20px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 30px;
+                    border-bottom: 3px solid $brand_color;
+                }
+
+            }
+
+        }
+
+    }
+
+    &_link {
+        @include font(14px, 24px, 'Lato-Bold');
+
+        display: inline-block;
+        text-align: center;
+        color: $text_white;
+        width: 230px;
+        padding: 21px 0;
+        background-color: $brand_color;
+        text-transform: uppercase;
+    }
+
+}
